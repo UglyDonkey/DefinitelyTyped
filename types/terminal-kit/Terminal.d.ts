@@ -458,6 +458,7 @@ declare namespace Terminal {
     previousPageHint?: string | undefined;
     style?: CTerminal | undefined;
     selectedStyle?: CTerminal | undefined;
+    selectedIndex?: number;
     keyBindings?: { [key: string]: string } | undefined;
     cancelable?: boolean | undefined;
     exitOnUnexpectedKey?: boolean | undefined;

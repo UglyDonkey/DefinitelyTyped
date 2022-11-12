@@ -1,11 +1,12 @@
 // Require the lib, get a working terminal
 import t, {
-  terminal as term,
-  autoComplete as ac,
-  getDetectedTerminal,
-  ScreenBufferHD,
-  ScreenBuffer,
-  Terminal
+    terminal as term,
+    autoComplete as ac,
+    getDetectedTerminal,
+    ScreenBufferHD,
+    ScreenBuffer,
+    Terminal,
+    Rect
 } from "terminal-kit";
 import "node";
 import * as fs from "fs";
@@ -277,7 +278,8 @@ const items1 = [
 const options = {
   y: 1, // the menu will be on the top of the terminal
   style: term.inverse,
-  selectedStyle: term.dim.blue.bgGreen
+  selectedStyle: term.dim.blue.bgGreen,
+  selectedIndex: 5
 };
 
 term.clear();
@@ -488,6 +490,7 @@ screen1.fill({
         color: 'black',
         bgColor: 'black',
     },
+    region: new Rect()
 });
 
 ScreenBuffer.loadImage(

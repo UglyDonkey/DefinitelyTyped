@@ -19,8 +19,8 @@ declare class ScreenBuffer extends NextGenEvents {
   static createFromString(
     options: {
       attr: number | ScreenBuffer.Attributes;
-      transparencyChar: string;
-      transparencyType: number;
+      transparencyChar?: string;
+      transparencyType?: number;
     },
     str: string
   ): ScreenBuffer;
@@ -53,6 +53,7 @@ declare class ScreenBuffer extends NextGenEvents {
   fill(options?: {
     attr: ScreenBuffer.Attributes | number;
     char?: string | undefined;
+    region?: Rect;
   }): void;
 
   clear(): void;
